@@ -1,4 +1,5 @@
 class SortingAlgorithm:
+    # insertion sort
     def insertionSort(self, arr):
         for j in range(1, len(arr)):  # Start from index 1
             key = arr[j]
@@ -8,14 +9,14 @@ class SortingAlgorithm:
                 i -= 1
             arr[i + 1] = key
         return arr
-
+    # merge sort 
     def MergeSort(self, a, left, right):
         if left < right:
             mid = (left + right) // 2
             self.MergeSort(a, left, mid)
             self.MergeSort(a, mid + 1, right)
             self.merge(a, left, mid, right)
-
+    # two way merging 
     def merge(self, a, left, mid, right):
         temp1, temp2 = [], []
         ans = []
